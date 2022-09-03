@@ -38,7 +38,10 @@ public class Juego {
         for (int i = 0; i < jugadores.length; i++) {
 
             jugadores[i].disparar(revolver);
-
+            System.out.println(revolver);
+            if (!jugadores[i].isVivo()){ // si jugador no esta vivo
+                return; // es como un break que sale del bucle
+            }
         }
 
     }
